@@ -46,8 +46,8 @@ def process_results(source_list):
         category = source_item.get(' category')
        
 
-        if poster:
-            source_object = Source(id,name,description,url,category)
-            source_results.append(source_object)
+        
+        source_object = Source(id,name,description,url,category)
+        source_results.append(source_object)
 
     return source_results
