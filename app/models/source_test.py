@@ -1,7 +1,7 @@
 import unittest
 from models import source
 
-# Movie = movie.Movie
+
 Source=source.Source
 
 class SourceTest(unittest.TestCase):

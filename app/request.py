@@ -1,7 +1,4 @@
 from app import app
-#Getting api key
-
-from app import app
 import urllib.request,json
 from .models import source
 
@@ -21,11 +18,36 @@ def get_source(category):
         get_source_data = url.read()
         get_source_response = json.loads( get_source_data)
 
-        movie_results = None
+        source_results = None
 
         if get_source_response['results']:
-            movie_results_list = get_movies_response['results']
-            movie_results = process_results(movie_results_list)
+            source_results_list = get_source_response['results']
+            source_results = process_results(source_results_list)
 
 
-    return movie_results
+    return source_results
+
+def process_results(source_list):
+    '''
+    Function  that processes the source result and transform them to a list of Objects
+
+    Args:
+        source_list: A list of dictionaries that contain movie details
+
+    Returns :
+        source_results: A list of source objects
+    '''
+    source_results = []
+    for source_item in source_list:
+        id = source_item.get('id')
+        name = source_item.get(' name')
+        description = source_item.get('description')
+        url = source_item.get('url ')
+        category = source_item.get(' category')
+       
+
+        if poster:
+            source_object = Source(id,name,description,url,category)
+            source_results.append(source_object)
+
+    return source_results
