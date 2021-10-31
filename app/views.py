@@ -1,6 +1,7 @@
 from flask import render_template
 from .request import get_source
 from app import app 
+from .request import get_articles
 
 
 @app.route('/')
