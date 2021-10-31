@@ -29,7 +29,7 @@ def get_source():
         if get_source_response['sources']:
             source_results_list = get_source_response['sources']
             source_results = process_results(source_results_list)
-
+            print(source_results_list)
 
     return source_results
 #processing the source results

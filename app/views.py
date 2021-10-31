@@ -13,9 +13,10 @@ def index():
 
     # Getting popular movie
     popular_source = get_source()
+   
     # print(popular_source)
     title = 'Home - Welcome to The best Movie Review Website Online'
-    return render_template('index.html', title = title,popular = popular_source)
+    return render_template('index.html', title = title,popular=popular_source)
     
 @app.route('/news-source/articles/<source_id>')
 def articles(source_id):

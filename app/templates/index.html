@@ -1,17 +1,18 @@
 {% import 'macros.html' as macro%}
 {% extends 'base.html'%}
-<body>
-    <h3> Popular Movies</h3>
-             <ul>
-                
-                    <li>macro displaySourceList(source_list) 
-
-                    </li>
-                    
+    {% block content %}
+       
+        <!-- Content block -->
+        
+        <h3> Top Sources</h3>
+            <ul>
+                {{ macro.displaySourceList(popular)}}
             </ul>
-     
-</body>
             
-
+            {% endblock%}
     
+
+
+
+
 
