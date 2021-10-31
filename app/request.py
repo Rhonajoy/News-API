@@ -1,7 +1,7 @@
 from os import name
 from app import app
 import urllib.request,json
-from app.models import article
+from .models import article
 from .models import source
 
 
@@ -83,17 +83,17 @@ def process_results_articles(articles_list):
     '''
     articles_results = []
 
-    for article_item in articles_list:
-        id = article_item.get('id')
-        name = article_item.get('name')
-        author = article_item.get('author')
-        url = article_item.get('url')
-        title = article_item.get('title')
+    for article_stuff in articles_list:
+        id = article_stuff.get('id')
+        name = article_stuff.get('name')
+        author = article_stuff.get('author')
+        url = article_stuff.get('url')
+        title = article_stuff.get('title')
        
         
-        urlToImage = article_item.get('urlToImage')
+        urlToImage = article_stuff.get('urlToImage')
        
-        content = article_item.get('content')
+        content = article_stuff.get('content')
 
         if urlToImage:
             articles_object = Article(

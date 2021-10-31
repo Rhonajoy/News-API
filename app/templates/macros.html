@@ -1,9 +1,48 @@
 {% macro displaySourceList(source_list) %}
+<div class="container-fluid">
+    <div class="row">
+        {% for source in source_list %}
+        <div class="col-md-4 ">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h4>{{ source.name}}</h4>
+                </div>
+                <div class="panel-body">
+                    <p>{{ source.description}}</p>
+                    <a  href="/articles/{{ source.id}}">{{ source.name}}</a></li>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
-    {% for source in source_list %}
-        <li>{{ source.name}}</li>
-    {% endfor %}
-
+</div>
 {% endmacro %}
 
+   
+
+{% macro displayArticleList(articles_list) %}
+<div class="container-fluid">
+    <div class="row">
+        {% for articles in articles_list %}
+        <div class="col-md-4 ">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                    <h4>{{ articles.title}}</h4>
+                </div>
+                <div class="panel-body">
+                    <img src="{{ articles.urlToImage}}" alt="">
+                    <p>{{ articles.content}}</p>
+                    <p>{{ articles.author}}</p>
+                    
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+   
+{% endmacro %}
 

@@ -1,13 +1,14 @@
-
-
-<body>
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
 <h1> Hello Source {{ id }} </h1>
+        {% block content %}
+       
             <!-- Popular movie section  -->
-            <h3> Popular Movies</h3>
-             <ul>
-                {% for source in article%}
-                    <li>{{ source.title}}</li>
-                    <p>{{ source.author}}</p>
-                {% endfor %}
+            <h3> Top Sources</h3>
+            <ul>
+                {{ macro.displayArticleList(article)}}
             </ul>
-     </body>
+            {% endblock%}
+            
+            </ul> -->
+     
