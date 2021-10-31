@@ -1,10 +1,7 @@
-from werkzeug.datastructures import ContentRange
-
-
 class Article:
     """
      '''
-    Source class to define Source Objects
+    Article  class to define Article Objects
     '''
     """
     def __init__(self,id,name,author,url,title,urlToImage,content):

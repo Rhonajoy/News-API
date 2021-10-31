@@ -1,0 +1,13 @@
+
+
+<body>
+<h1> Hello Source {{ id }} </h1>
+            <!-- Popular movie section  -->
+            <h3> Popular Movies</h3>
+             <ul>
+                {% for source in article%}
+                    <li>{{ source.title}}</li>
+                    <p>{{ source.author}}</p>
+                {% endfor %}
+            </ul>
+     </body>
