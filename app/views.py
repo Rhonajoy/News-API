@@ -13,7 +13,7 @@ def index():
 
     # Getting popular movie
     popular_source = get_source()
-    print(popular_source)
+    # print(popular_source)
     title = 'Home - Welcome to The best Movie Review Website Online'
     return render_template('index.html', title = title,popular = popular_source)
     

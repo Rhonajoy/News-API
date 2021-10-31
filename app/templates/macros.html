@@ -1,0 +1,9 @@
+
+{% macro displaySourceList(source_list) %}
+
+{% for source in popular%}
+<li>{{ source.id}}</li>
+<p>{{ source.description}}</p>
+{% endfor %}
+
+{% endmacro %}
