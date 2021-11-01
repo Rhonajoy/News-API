@@ -1,5 +1,5 @@
 {% macro displaySourceList(source_list) %}
-<div class="container-fluid">
+<div class="container-fluid ">
     <div class="row">
 
         {% for source in source_list %}
@@ -15,7 +15,7 @@
             </div>
         </div> -->
         
-        <div class="card col-md-6  display">
+        <div class="card col-md-4  display">
             <div class="card-body content">
                 <h4>{{ source.name}}</h4>
                
@@ -35,14 +35,14 @@
 <div class="container-fluid">
     <div class="row col-md-12">
         {% for articles in articles_list %}
-        <div class="card col-md-3 mx-3 display">
+        <div class="card col-md-6 mx-3 display">
             <div class="card-body content">
                 <h4>{{ articles.title}}</h4>
                
             </div>
             <div class="card-body">
                 <!-- <div class="card-image p-4 mb-2"> -->
-                    <img src="{{ articles.urlToImage}}" alt="" width="350px" height="200px">
+                    <img src="{{ articles.urlToImage}}" alt="" width="90%" height="90%">
                 <!-- </div> -->
                
             </div>

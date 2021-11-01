@@ -1,5 +1,16 @@
-import unittest
-from app.models import Source
+ import unittest
+class Source:
+    """
+     '''
+    Source class to define Source Objects
+    '''
+    """
+    def __init__(self,id,name,description,url,category):
+        self.id =id
+        self.name = name
+        self.description = description
+        self.url = url
+        self.category = category
 
 
 # Source=source.Source
@@ -20,5 +31,3 @@ class SourceTest(unittest.TestCase):
         self.assertTrue(isinstance(self.new_source,Source))
 
 
-if __name__ == '__main__':
-    unittest.main()
