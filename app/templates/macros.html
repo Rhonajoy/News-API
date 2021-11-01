@@ -1,8 +1,9 @@
 {% macro displaySourceList(source_list) %}
 <div class="container-fluid">
     <div class="row">
+
         {% for source in source_list %}
-        <div class="col-md-4 ">
+        <!-- <div class="col-md-4 ">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
                     <h4>{{ source.name}}</h4>
@@ -12,17 +13,53 @@
                     <a  href="/articles/{{ source.id}}">{{ source.name}}</a></li>
                 </div>
             </div>
+        </div> -->
+        
+        <div class="card col-md-6  display">
+            <div class="card-body content">
+                <h4>{{ source.name}}</h4>
+               
+            </div>
+            <div class="card-body">
+                <p>{{ source.description}}</p>
+                    <a  href="/articles/{{ source.id}}">{{ source.name}}</a></li>
+              </div>
+        </div>
         </div>
         {% endfor %}
     </div>
+{% endmacro %}
 
+{% macro displayArticleList(articles_list) %}
+
+<div class="container-fluid">
+    <div class="row col-md-12">
+        {% for articles in articles_list %}
+        <div class="card col-md-3 mx-3 display">
+            <div class="card-body content">
+                <h4>{{ articles.title}}</h4>
+               
+            </div>
+            <div class="card-body">
+                <!-- <div class="card-image p-4 mb-2"> -->
+                    <img src="{{ articles.urlToImage}}" alt="" width="350px" height="200px">
+                <!-- </div> -->
+               
+            </div>
+                    <p>{{ articles.content}}</p>
+                    <p>{{ articles.author}}</p>
+                    
+              
+        </div>
+        {% endfor %}
+
+    </div>
 </div>
 {% endmacro %}
 
-   
 
-{% macro displayArticleList(articles_list) %}
-<div class="container-fluid">
+
+<!-- <div class="container-fluid">
     <div class="row">
         {% for articles in articles_list %}
         <div class="col-md-4 ">
@@ -41,8 +78,7 @@
         {% endfor %}
     </div>
 
-</div>
+</div> -->
 
    
-{% endmacro %}
 
