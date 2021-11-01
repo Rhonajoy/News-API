@@ -1,10 +1,10 @@
 from flask import render_template
-from .request import get_source
+from . import main
 from app import app 
-from .request import get_articles
+from .request import get_articles,get_source
 
 
-@app.route('/')
+@main.route('/')
 def index():
 
     '''
@@ -18,7 +18,7 @@ def index():
     title = 'Home - Welcome to The best Movie Review Website Online'
     return render_template('index.html', title = title,popular=popular_source)
     
-@app.route('/articles/<source_id>')
+@main.route('/articles/<source_id>')
 def articles(source_id):
     '''
     View articles page => function that returns the articles page from a source id 
