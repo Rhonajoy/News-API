@@ -1,8 +1,22 @@
 import unittest
-from app.models import Article
+# from app.models import Article
 
 
-# Article=article.Article
+class Article:
+    """
+     '''
+    Article  class to define Article Objects
+    '''
+    """
+    def __init__(self,id,name,author,url,title,urlToImage,content,publishedAt):
+        self.id =id
+        self.name = name
+        self.author = author
+        self.url = url
+        self.title = title
+        self.urlToImage=urlToImage
+        self.content= content
+        self.publishedAt=publishedAt
 
 class SourceTest(unittest.TestCase):
     '''
@@ -13,9 +27,11 @@ class SourceTest(unittest.TestCase):
         '''
         Set up method that will run before every Test
         '''
-        self.new_article = Article('abc-news','ABC News','our trusted source for breaking news, analysis, exclusive interviews, headlines, and videos at ABCNews.com.','https://abcnews.go.com/','general')
-        #  ','CNN','skjsdjfkd.jpg','killer cat','killer','www.cnn.com','12/12/15','name
-
+        self.new_article = Article('cnn-news','name','killer','www.cnn.com',"killer cat","https.tyyyyyy.com"," trusted source for breaking news, analysis, ","12/12/15")
+        
     def test_instance(self):
         self.assertTrue(isinstance(self.new_article,Article))
 
+
+# if __name__ == '__main__':
+#     unittest.main()

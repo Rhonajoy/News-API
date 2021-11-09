@@ -1,4 +1,4 @@
-import unittest
+ import unittest
 class Source:
     """
      '''
@@ -39,6 +39,6 @@ class SourceTest(unittest.TestCase):
     #     self.assertEquals(self.new_source.category,'general')
         
 
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+#     unittest.main()
 
